@@ -10,7 +10,7 @@ DiliCMS后台界面主题 http://www.dilicms.com/
 
 3.将shared/libraries/Acl.php中的show_left_menus()方法换成如下代码：
 
-`
+```php
     public function show_left_menus()
 	{
 		foreach ($this->left_menus as $key => $v)
@@ -36,4 +36,4 @@ DiliCMS后台界面主题 http://www.dilicms.com/
 			}
 		}
 	}
-`
+```
