@@ -106,22 +106,14 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <?php if($this->
-        uri->rsegment(1) != 'module'): ?>
-        <?php $this->
-        load->view(isset($tpl) && $tpl ? $tpl : 'sys_default'); ?>
-        <?php else: ?>
-        <?php if(!isset($msg)){echo $content;}else{$this->
-        load->view($tpl);} ?>
-        <?php endif; ?></section>
-
-      <!-- Main content -->
-      <section class="content">
-
-        <!-- Your Page Content Here --> </section>
-      <!-- /.content --> </div>
+      <?php if($this->
+      uri->rsegment(1) != 'module'): ?>
+      <?php $this->
+      load->view(isset($tpl) && $tpl ? $tpl : 'sys_default'); ?>
+      <?php else: ?>
+      <?php if(!isset($msg)){echo $content;}else{$this->
+      load->view($tpl);} ?>
+      <?php endif; ?></div>
     <!-- /.content-wrapper -->
 
     <!-- Main Footer -->
