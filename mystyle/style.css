@@ -1,2 +1,5 @@
 body{font-size: 12px;}
 .sidebar-menu .treeview-menu>li>a{ font-size: 12px;}
+
+/* sys-message pages */
+.sys-message{ margin-top: 200px;}
