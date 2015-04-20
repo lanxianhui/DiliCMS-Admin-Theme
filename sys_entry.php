@@ -1,4 +1,8 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
+<?php
+$left_menus_class_name = $this->uri->segment(1);
+$left_menus_method_name = $this->uri->segment(2);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -99,7 +103,7 @@
             <?php else: ?>
             菜单栏
             <?php endif; ?></li>
-          <?php $this->acl->show_left_menus(); ?></ul>
+          <?php $this->acl->show_left_menus($left_menus_class_name,$left_menus_method_name); ?></ul>
         <!-- /.sidebar-menu --> </section>
       <!-- /.sidebar --> </aside>
 
