@@ -110,10 +110,6 @@
 					</div>
 					<!-- /.tab-pane -->
 					<div class="tab-pane <?php echo $current_tab == 'site_attachment' ? 'active' : ''; ?>" id="tab_3">
-
-
-
-
 						<!-- general form elements -->
 						<div class="box box-primary">
 							<!-- form start -->
@@ -143,18 +139,47 @@
 							<?php echo form_close(); ?>
 						</div>
 						<!-- /.box -->
-
-
-
-
-
-
-
 					</div>
 					<!-- /.tab-pane -->
-					<div class="tab-pane <?php echo $current_tab == 'site_terms' ? 'active' : ''; ?>" id="tab_4">注册协议</div>
+					<div class="tab-pane <?php echo $current_tab == 'site_terms' ? 'active' : ''; ?>" id="tab_4">
+						<!-- general form elements -->
+						<div class="box box-primary">
+							<!-- form start -->
+							<?php echo form_open('setting/site?tab=site_terms'); ?>
+							<div class="box-body">
+								<div class="form-group">
+									<label>注册协议：</label>
+									<textarea name='site_terms'  id="site_terms" rows="10" cols="80"></textarea>
+								</div>	
+							</div>
+							<!-- /.box-body -->
+							<div class="box-footer">
+								<button type="submit" class="btn btn-primary">保存注册协议</button>
+							</div>
+							<?php echo form_close(); ?>
+						</div>
+						<!-- /.box -->
+					</div>
 					<!-- /.tab-pane -->
-					<div class="tab-pane <?php echo $current_tab == 'site_theme' ? 'active' : ''; ?>" id="tab_5">主题设置</div>
+					<div class="tab-pane <?php echo $current_tab == 'site_theme' ? 'active' : ''; ?>" id="tab_5">
+						<!-- general form elements -->
+						<div class="box box-primary">
+							<!-- form start -->
+							<?php echo form_open('setting/site?tab=site_theme'); ?>
+							<div class="box-body">
+								<div class="form-group">
+									<label>注册协议：</label>
+									<input type="text" class="form-control" name='site_theme'  id="site_theme" value="default" >
+								</div>	
+							</div>
+							<!-- /.box-body -->
+							<div class="box-footer">
+								<button type="submit" class="btn btn-primary">保存主题设置</button>
+							</div>
+							<?php echo form_close(); ?>
+						</div>
+						<!-- /.box -->
+					</div>
 					<!-- /.tab-pane -->
 				</div>
 				<!-- /.tab-content -->
@@ -167,8 +192,7 @@
 <!-- CK Editor -->
 <script src="plugins/ckeditor/ckeditor.js"></script>
 <script>
-// Replace the <textarea id="editor1"> with a CKEditor
-// instance, using default configuration.
 CKEDITOR.replace( 'site_footer' );
 CKEDITOR.replace( 'site_close_reason' );
+CKEDITOR.replace( 'site_terms' );
 </script>
