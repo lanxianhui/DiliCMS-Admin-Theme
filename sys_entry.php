@@ -54,8 +54,7 @@
             <li>
               <a>
                 您好
-                <?php echo $this->
-                _admin->username; ?>，当前身份
+                <?php echo $this->_admin->username; ?>，当前身份
                 <?php echo $this->_admin->name; ?></a>
             </li>
             <li>
@@ -106,13 +105,10 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-      <?php if($this->
-      uri->rsegment(1) != 'module'): ?>
-      <?php $this->
-      load->view(isset($tpl) && $tpl ? $tpl : 'sys_default'); ?>
+      <?php if($this->uri->rsegment(1) != 'module'): ?>
+      <?php $this->load->view(isset($tpl) && $tpl ? $tpl : 'sys_default'); ?>
       <?php else: ?>
-      <?php if(!isset($msg)){echo $content;}else{$this->
-      load->view($tpl);} ?>
+      <?php if(!isset($msg)){echo $content;}else{$this->load->view($tpl);} ?>
       <?php endif; ?></div>
     <!-- /.content-wrapper -->
 
